@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "525963b6-7b4a-414f-86c4-da3bbfb8e523",
+		"name": "gitHub Technical Exercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "webhook ping event",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"content-length": true,
+					"host": true,
+					"accept-encoding": true,
+					"connection": true,
+					"accept": true,
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "X-GitHub-Event",
+						"value": "ping",
+						"type": "text"
+					},
+					{
+						"key": "Request method",
+						"value": "POST",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/payload",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"payload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "repository event",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-GitHub-Event",
+						"value": "repository",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"created\",\n    \"repository\": {\n        \"id\": 479710245,\n        \"node_id\": \"R_kgDOHJfMJQ\",\n        \"name\": \"univo\",\n        \"full_name\": \"knechtelOrganization/univo\",\n        \"private\": false,\n        \"owner\": {\n            \"login\": \"knechtelOrganization\",\n            \"id\": 102973838,\n            \"node_id\": \"O_kgDOBiNBjg\",\n            \"avatar_url\": \"https://avatars.githubusercontent.com/u/102973838?v=4\",\n            \"gravatar_id\": \"\",\n            \"url\": \"https://api.github.com/users/knechtelOrganization\",\n            \"html_url\": \"https://github.com/knechtelOrganization\",\n            \"followers_url\": \"https://api.github.com/users/knechtelOrganization/followers\",\n            \"following_url\": \"https://api.github.com/users/knechtelOrganization/following{/other_user}\",\n            \"gists_url\": \"https://api.github.com/users/knechtelOrganization/gists{/gist_id}\",\n            \"starred_url\": \"https://api.github.com/users/knechtelOrganization/starred{/owner}{/repo}\",\n            \"subscriptions_url\": \"https://api.github.com/users/knechtelOrganization/subscriptions\",\n            \"organizations_url\": \"https://api.github.com/users/knechtelOrganization/orgs\",\n            \"repos_url\": \"https://api.github.com/users/knechtelOrganization/repos\",\n            \"events_url\": \"https://api.github.com/users/knechtelOrganization/events{/privacy}\",\n            \"received_events_url\": \"https://api.github.com/users/knechtelOrganization/received_events\",\n            \"type\": \"Organization\",\n            \"site_admin\": false\n        },\n        \"html_url\": \"https://github.com/knechtelOrganization/univo\",\n        \"description\": null,\n        \"fork\": false,\n        \"url\": \"https://api.github.com/repos/knechtelOrganization/univo\",\n        \"forks_url\": \"https://api.github.com/repos/knechtelOrganization/univo/forks\",\n        \"keys_url\": \"https://api.github.com/repos/knechtelOrganization/univo/keys{/key_id}\",\n        \"collaborators_url\": \"https://api.github.com/repos/knechtelOrganization/univo/collaborators{/collaborator}\",\n        \"teams_url\": \"https://api.github.com/repos/knechtelOrganization/univo/teams\",\n        \"hooks_url\": \"https://api.github.com/repos/knechtelOrganization/univo/hooks\",\n        \"issue_events_url\": \"https://api.github.com/repos/knechtelOrganization/univo/issues/events{/number}\",\n        \"events_url\": \"https://api.github.com/repos/knechtelOrganization/univo/events\",\n        \"assignees_url\": \"https://api.github.com/repos/knechtelOrganization/univo/assignees{/user}\",\n        \"branches_url\": \"https://api.github.com/repos/knechtelOrganization/univo/branches{/branch}\",\n        \"tags_url\": \"https://api.github.com/repos/knechtelOrganization/univo/tags\",\n        \"blobs_url\": \"https://api.github.com/repos/knechtelOrganization/univo/git/blobs{/sha}\",\n        \"git_tags_url\": \"https://api.github.com/repos/knechtelOrganization/univo/git/tags{/sha}\",\n        \"git_refs_url\": \"https://api.github.com/repos/knechtelOrganization/univo/git/refs{/sha}\",\n        \"trees_url\": \"https://api.github.com/repos/knechtelOrganization/univo/git/trees{/sha}\",\n        \"statuses_url\": \"https://api.github.com/repos/knechtelOrganization/univo/statuses/{sha}\",\n        \"languages_url\": \"https://api.github.com/repos/knechtelOrganization/univo/languages\",\n        \"stargazers_url\": \"https://api.github.com/repos/knechtelOrganization/univo/stargazers\",\n        \"contributors_url\": \"https://api.github.com/repos/knechtelOrganization/univo/contributors\",\n        \"subscribers_url\": \"https://api.github.com/repos/knechtelOrganization/univo/subscribers\",\n        \"subscription_url\": \"https://api.github.com/repos/knechtelOrganization/univo/subscription\",\n        \"commits_url\": \"https://api.github.com/repos/knechtelOrganization/univo/commits{/sha}\",\n        \"git_commits_url\": \"https://api.github.com/repos/knechtelOrganization/univo/git/commits{/sha}\",\n        \"comments_url\": \"https://api.github.com/repos/knechtelOrganization/univo/comments{/number}\",\n        \"issue_comment_url\": \"https://api.github.com/repos/knechtelOrganization/univo/issues/comments{/number}\",\n        \"contents_url\": \"https://api.github.com/repos/knechtelOrganization/univo/contents/{+path}\",\n        \"compare_url\": \"https://api.github.com/repos/knechtelOrganization/univo/compare/{base}...{head}\",\n        \"merges_url\": \"https://api.github.com/repos/knechtelOrganization/univo/merges\",\n        \"archive_url\": \"https://api.github.com/repos/knechtelOrganization/univo/{archive_format}{/ref}\",\n        \"downloads_url\": \"https://api.github.com/repos/knechtelOrganization/univo/downloads\",\n        \"issues_url\": \"https://api.github.com/repos/knechtelOrganization/univo/issues{/number}\",\n        \"pulls_url\": \"https://api.github.com/repos/knechtelOrganization/univo/pulls{/number}\",\n        \"milestones_url\": \"https://api.github.com/repos/knechtelOrganization/univo/milestones{/number}\",\n        \"notifications_url\": \"https://api.github.com/repos/knechtelOrganization/univo/notifications{?since,all,participating}\",\n        \"labels_url\": \"https://api.github.com/repos/knechtelOrganization/univo/labels{/name}\",\n        \"releases_url\": \"https://api.github.com/repos/knechtelOrganization/univo/releases{/id}\",\n        \"deployments_url\": \"https://api.github.com/repos/knechtelOrganization/univo/deployments\",\n        \"created_at\": \"2022-04-09T11:48:29Z\",\n        \"updated_at\": \"2022-04-09T11:48:29Z\",\n        \"pushed_at\": null,\n        \"git_url\": \"git://github.com/knechtelOrganization/univo.git\",\n        \"ssh_url\": \"git@github.com:knechtelOrganization/univo.git\",\n        \"clone_url\": \"https://github.com/knechtelOrganization/univo.git\",\n        \"svn_url\": \"https://github.com/knechtelOrganization/univo\",\n        \"homepage\": null,\n        \"size\": 0,\n        \"stargazers_count\": 0,\n        \"watchers_count\": 0,\n        \"language\": null,\n        \"has_issues\": true,\n        \"has_projects\": true,\n        \"has_downloads\": true,\n        \"has_wiki\": true,\n        \"has_pages\": false,\n        \"forks_count\": 0,\n        \"mirror_url\": null,\n        \"archived\": false,\n        \"disabled\": false,\n        \"open_issues_count\": 0,\n        \"license\": null,\n        \"allow_forking\": true,\n        \"is_template\": false,\n        \"topics\": [],\n        \"visibility\": \"public\",\n        \"forks\": 0,\n        \"open_issues\": 0,\n        \"watchers\": 0,\n        \"default_branch\": \"main\"\n    },\n    \"organization\": {\n        \"login\": \"knechtelOrganization\",\n        \"id\": 102973838,\n        \"node_id\": \"O_kgDOBiNBjg\",\n        \"url\": \"https://api.github.com/orgs/knechtelOrganization\",\n        \"repos_url\": \"https://api.github.com/orgs/knechtelOrganization/repos\",\n        \"events_url\": \"https://api.github.com/orgs/knechtelOrganization/events\",\n        \"hooks_url\": \"https://api.github.com/orgs/knechtelOrganization/hooks\",\n        \"issues_url\": \"https://api.github.com/orgs/knechtelOrganization/issues\",\n        \"members_url\": \"https://api.github.com/orgs/knechtelOrganization/members{/member}\",\n        \"public_members_url\": \"https://api.github.com/orgs/knechtelOrganization/public_members{/member}\",\n        \"avatar_url\": \"https://avatars.githubusercontent.com/u/102973838?v=4\",\n        \"description\": null\n    },\n    \"sender\": {\n        \"login\": \"miknechtel\",\n        \"id\": 102973326,\n        \"node_id\": \"U_kgDOBiM_jg\",\n        \"avatar_url\": \"https://avatars.githubusercontent.com/u/102973326?v=4\",\n        \"gravatar_id\": \"\",\n        \"url\": \"https://api.github.com/users/miknechtel\",\n        \"html_url\": \"https://github.com/miknechtel\",\n        \"followers_url\": \"https://api.github.com/users/miknechtel/followers\",\n        \"following_url\": \"https://api.github.com/users/miknechtel/following{/other_user}\",\n        \"gists_url\": \"https://api.github.com/users/miknechtel/gists{/gist_id}\",\n        \"starred_url\": \"https://api.github.com/users/miknechtel/starred{/owner}{/repo}\",\n        \"subscriptions_url\": \"https://api.github.com/users/miknechtel/subscriptions\",\n        \"organizations_url\": \"https://api.github.com/users/miknechtel/orgs\",\n        \"repos_url\": \"https://api.github.com/users/miknechtel/repos\",\n        \"events_url\": \"https://api.github.com/users/miknechtel/events{/privacy}\",\n        \"received_events_url\": \"https://api.github.com/users/miknechtel/received_events\",\n        \"type\": \"User\",\n        \"site_admin\": false\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/payload",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"payload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
