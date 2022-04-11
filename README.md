@@ -26,7 +26,7 @@ This repository contains five files:
 3. [app-config.properties](https://github.com/miknechtel/interview/blob/main/app-config.properties) file where you can find user, password and token.
 4. [app.py](https://github.com/miknechtel/interview/blob/main/app.py) is where you have all definitions of routes and functions to perform for each action.
 5. [gitHub Technical Exercise.postman_collection.json](https://github.com/miknechtel/interview/blob/main/gitHub%20Technical%20Exercise.postman_collection.json) postman file which has all the HTTP requests that can be performed against the web server.
-6. [presentation.pdf](https://github.com/miknechtel/interview/blob/main/presentation.pdf) material that I will use to present myself and my project.
+6. [presentation.pdf](https://github.com/miknechtel/gitInterview/blob/main/presentation.pdf) material that I will use to present myself and my project.
 
 ## Installation guidelines
 
